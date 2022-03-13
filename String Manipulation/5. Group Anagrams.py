@@ -8,8 +8,7 @@ class Solution:
                 index_dict[string] = [idx]
             else:
                 index_dict[string].append(idx)
-        
-        output = [list(map(strs.index, value)) for value in index_dict.values()]
+        output = [list(map(lambda i: strs[i], value)) for value in list(index_dict.values())]
         return output
 
 solution = Solution()
